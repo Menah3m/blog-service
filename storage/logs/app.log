@@ -1,0 +1,28 @@
+2022/03/07 15:46:15 {"callers":["/Users/yasu/Code/go_project/src/menah3m/gin-blog/blog-service/main.go : 27  main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1646639175489642000}
+2022/03/07 16:20:13 {"callers":["/Users/yasu/Code/go_project/src/menah3m/gin-blog/blog-service/main.go : 27  main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1646641213917783000}
+2022/03/07 16:26:30 {"callers":["/Users/yasu/Code/go_project/src/menah3m/gin-blog/blog-service/main.go : 27  main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1646641590339594000}
+2022/03/07 16:55:01 {"callers":["/Users/yasu/Code/go_project/src/menah3m/gin-blog/blog-service/main.go : 27  main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1646643301194620000}
+2022/03/09 10:00:04 {"callers":["/Users/yasu/Code/go_project/src/menah3m/blog-service/main.go : 27  main.init.0"],"level":"error","message":"app.BindAndValid errs: State必须是[0 1]中的一个","time":1646791204070300000}
+2022/03/24 15:52:30 {"callers":["/Users/yasu/Code/go_project/blog-service/main.go : 27  main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1648108350968362000}
+2022/03/24 15:54:20 {"callers":["/Users/yasu/Code/go_project/blog-service/main.go : 27  main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1648108460018494000}
+2022/03/24 15:54:33 {"callers":["/Users/yasu/Code/go_project/blog-service/main.go : 27  main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1648108473727231000}
+2022/03/24 15:54:57 {"callers":["/Users/yasu/Code/go_project/blog-service/main.go : 27  main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1648108497419846000}
+2022/03/24 15:56:19 {"callers":["/Users/yasu/Code/go_project/blog-service/main.go : 27  main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1648108579059092000}
+2022/03/24 15:58:35 {"callers":["/Users/yasu/Code/go_project/blog-service/main.go : 27  main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1648108715859182000}
+2022/03/24 16:03:07 {"callers":["/Users/yasu/Code/go_project/blog-service/main.go : 27  main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1648108987522638000}
+2022/03/24 16:07:54 {"callers":["/Users/yasu/Code/go_project/blog-service/main.go : 27  main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1648109274715029000}
+2022/03/24 16:09:32 {"callers":["/Users/yasu/Code/go_project/blog-service/main.go : 27  main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1648109372386824000}
+2022/03/24 16:21:32 {"callers":["/Users/yasu/Code/go_project/blog-service/main.go : 27  main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1648110092906059000}
+2022/03/24 16:21:55 {"callers":["/Users/yasu/Code/go_project/blog-service/main.go : 27  main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1648110115970602000}
+2022/03/24 16:24:24 {"callers":["/Users/yasu/Code/go_project/blog-service/main.go : 27  main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1648110264477021000}
+2022/03/24 16:24:30 {"callers":["/Users/yasu/Code/go_project/blog-service/main.go : 27  main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1648110270151235000}
+2022/03/24 16:24:38 {"callers":["/Users/yasu/Code/go_project/blog-service/main.go : 27  main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1648110278837651000}
+2022/03/24 16:24:49 {"callers":["/Users/yasu/Code/go_project/blog-service/main.go : 27  main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1648110289375324000}
+2022/03/24 16:25:12 {"callers":["/Users/yasu/Code/go_project/blog-service/main.go : 27  main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1648110312245790000}
+2022/03/24 16:26:08 {"callers":["/Users/yasu/Code/go_project/blog-service/main.go : 27  main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1648110368726987000}
+2022/03/24 16:35:05 {"callers":["/Users/yasu/Code/go_project/blog-service/main.go : 27  main.init.0"],"level":"error","message":"app.BindAndValid errs: Name长度必须至少为2个字符","time":1648110905452964000}
+2022/03/24 16:37:11 {"callers":["/Users/yasu/Code/go_project/blog-service/main.go : 27  main.init.0"],"level":"error","message":"app.BindAndValid errs: Name为必填字段","time":1648111031221586000}
+2022/03/24 16:38:14 {"callers":["/Users/yasu/Code/go_project/blog-service/main.go : 27  main.init.0"],"level":"error","message":"app.BindAndValid errs: Name为必填字段","time":1648111094742947000}
+2022/03/24 16:38:18 {"callers":["/Users/yasu/Code/go_project/blog-service/main.go : 27  main.init.0"],"level":"error","message":"app.BindAndValid errs: Name长度必须至少为2个字符","time":1648111098191606000}
+2022/03/24 16:38:42 {"callers":["/Users/yasu/Code/go_project/blog-service/main.go : 27  main.init.0"],"level":"error","message":"app.BindAndValid errs: CreatedBy长度必须至少为3个字符","time":1648111122430567000}
+2022/03/24 16:52:29 {"callers":["/Users/yasu/Code/go_project/blog-service/main.go : 27  main.init.0"],"level":"error","message":"app.BindAndValid errs: Name长度必须至少为2个字符","time":1648111949602191000}
