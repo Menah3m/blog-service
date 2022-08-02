@@ -26,3 +26,7 @@
 2022/03/24 16:38:18 {"callers":["/Users/yasu/Code/go_project/blog-service/main.go : 27  main.init.0"],"level":"error","message":"app.BindAndValid errs: Name长度必须至少为2个字符","time":1648111098191606000}
 2022/03/24 16:38:42 {"callers":["/Users/yasu/Code/go_project/blog-service/main.go : 27  main.init.0"],"level":"error","message":"app.BindAndValid errs: CreatedBy长度必须至少为3个字符","time":1648111122430567000}
 2022/03/24 16:52:29 {"callers":["/Users/yasu/Code/go_project/blog-service/main.go : 27  main.init.0"],"level":"error","message":"app.BindAndValid errs: Name长度必须至少为2个字符","time":1648111949602191000}
+2022/08/01 13:23:05 {"callers":["/Users/yasu/Code/go/src/github.com/menah3m/xblog/main.go : 27  main.init.0"],"level":"error","message":"app.BindAndValid errs:ID为必填字段","time":1659331385595359000}
+2022/08/01 13:23:26 {"callers":["/Users/yasu/Code/go/src/github.com/menah3m/xblog/main.go : 27  main.init.0"],"level":"error","message":"app.BindAndValid errs:ID为必填字段","time":1659331406710312000}
+2022/08/01 13:26:23 {"callers":["/Users/yasu/Code/go/src/github.com/menah3m/xblog/main.go : 27  main.init.0"],"level":"error","message":"app.BindAndValid errs:CreatedBy为必填字段","time":1659331583796102000}
+2022/08/01 13:27:15 {"callers":["/Users/yasu/Code/go/src/github.com/menah3m/xblog/main.go : 27  main.init.0"],"level":"error","message":"svc.GetArticle err:record not found","time":1659331635726439000}

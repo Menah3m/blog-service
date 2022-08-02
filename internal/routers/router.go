@@ -32,7 +32,6 @@ func NewRouter() *gin.Engine {
 		apiv1.PATCH("/articles/:id/state", article.Update)
 		apiv1.GET("/articles", article.List)
 		apiv1.GET("/articles/:id", article.Get)
-
 	}
 
 	return r

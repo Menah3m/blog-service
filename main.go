@@ -32,8 +32,8 @@ func init() {
 
 // @title 博客后端
 // @version 1.0
-// @description 基于Go的博客后端
-// @termsOfService https://github.com/go-programming-tour-book
+// @description 基于 Go 的博客后端
+
 func main() {
 	gin.SetMode(global.ServerSetting.RunMode)
 	router := routers.NewRouter()

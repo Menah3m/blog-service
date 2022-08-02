@@ -38,13 +38,12 @@ func (l Level) String() string {
 	case LevelPanic:
 		return "panic"
 	}
-	return " "
+	return ""
 }
 
 type Logger struct {
 	newLogger *log.Logger
 	ctx       context.Context
-	level     Level
 	fields    Fields
 	callers   []string
 }
@@ -57,12 +56,6 @@ func NewLogger(w io.Writer, prefix string, flag int) *Logger {
 func (l *Logger) clone() *Logger {
 	nl := *l
 	return &nl
-}
-
-func (l *Logger) WithLevel(lvl Level) *Logger {
-	ll := l.clone()
-	ll.level = lvl
-	return ll
 }
 
 func (l *Logger) WithFields(f Fields) *Logger {
@@ -87,8 +80,9 @@ func (l *Logger) WithCaller(skip int) *Logger {
 	pc, file, line, ok := runtime.Caller(skip)
 	if ok {
 		f := runtime.FuncForPC(pc)
-		ll.callers = []string{fmt.Sprintf("%s : %d  %s", file, line, f.Name())}
+		ll.callers = []string{fmt.Sprintf("%s: %d %s", file, line, f.Name())}
 	}
+
 	return ll
 }
 
@@ -110,9 +104,9 @@ func (l *Logger) WithCallersFrames() *Logger {
 	return ll
 }
 
-func (l *Logger) JSONFormat(message string) map[string]interface{} {
+func (l *Logger) JSONFormat(level Level, message string) map[string]interface{} {
 	data := make(Fields, len(l.fields)+4)
-	data["level"] = l.level.String()
+	data["level"] = level.String()
 	data["time"] = time.Now().Local().UnixNano()
 	data["message"] = message
 	data["callers"] = l.callers
@@ -123,13 +117,14 @@ func (l *Logger) JSONFormat(message string) map[string]interface{} {
 			}
 		}
 	}
+
 	return data
 }
 
-func (l *Logger) Output(message string) {
-	body, _ := json.Marshal(l.JSONFormat(message))
+func (l *Logger) Output(level Level, message string) {
+	body, _ := json.Marshal(l.WithCaller(3).JSONFormat(level, message))
 	content := string(body)
-	switch l.level {
+	switch level {
 	case LevelDebug:
 		l.newLogger.Print(content)
 	case LevelInfo:
@@ -145,50 +140,26 @@ func (l *Logger) Output(message string) {
 	}
 }
 
-func (l *Logger) Debug(v ...interface{}) {
-	l.WithLevel(LevelDebug).Output(fmt.Sprint(v...))
-}
-
-func (l *Logger) Debugf(format string, v ...interface{}) {
-	l.WithLevel(LevelDebug).Output(fmt.Sprintf(format, v...))
-}
-
 func (l *Logger) Info(v ...interface{}) {
-	l.WithLevel(LevelInfo).Output(fmt.Sprint(v...))
+	l.Output(LevelInfo, fmt.Sprint(v...))
 }
 
 func (l *Logger) Infof(format string, v ...interface{}) {
-	l.WithLevel(LevelInfo).Output(fmt.Sprintf(format, v...))
-}
-
-func (l *Logger) Warn(v ...interface{}) {
-	l.WithLevel(LevelWarn).Output(fmt.Sprint(v...))
-}
-
-func (l *Logger) Warnf(format string, v ...interface{}) {
-	l.WithLevel(LevelWarn).Output(fmt.Sprintf(format, v...))
+	l.Output(LevelInfo, fmt.Sprintf(format, v...))
 }
 
 func (l *Logger) Error(v ...interface{}) {
-	l.WithLevel(LevelError).Output(fmt.Sprint(v...))
+	l.Output(LevelError, fmt.Sprint(v...))
 }
 
 func (l *Logger) Errorf(format string, v ...interface{}) {
-	l.WithLevel(LevelError).Output(fmt.Sprintf(format, v...))
+	l.Output(LevelError, fmt.Sprintf(format, v...))
 }
 
 func (l *Logger) Fatal(v ...interface{}) {
-	l.WithLevel(LevelFatal).Output(fmt.Sprint(v...))
+	l.Output(LevelFatal, fmt.Sprint(v...))
 }
 
 func (l *Logger) Fatalf(format string, v ...interface{}) {
-	l.WithLevel(LevelFatal).Output(fmt.Sprintf(format, v...))
-}
-
-func (l *Logger) Panic(v ...interface{}) {
-	l.WithLevel(LevelPanic).Output(fmt.Sprint(v...))
-}
-
-func (l *Logger) Panicf(format string, v ...interface{}) {
-	l.WithLevel(LevelPanic).Output(fmt.Sprintf(format, v...))
+	l.Output(LevelFatal, fmt.Sprintf(format, v...))
 }
