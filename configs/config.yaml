@@ -10,6 +10,15 @@ App:
   LogSavePath: storage/logs
   LogFileName: app
   LogFileExt: .log
+  UploadSavePath: storage/uploads #上传文件的最终保存目录
+  UploadServerUrl: http://127.0.0.1:8000/static #上传文件后用于展示文件的地址
+  UploadImageMaxSize: 20  #MB
+  UploadImageAllowExts: # 上传文件允许的文件后缀
+    - .jpg
+    - .jpeg
+    - .png
+  DefaultContextTimeout: 60
+
 
 Database:
   DBType: mysql
@@ -22,3 +31,19 @@ Database:
   ParseTime: True
   MaxIdleConns: 10
   MaxOpenConns: 30
+
+JWT:
+  Secret: kmj0206
+  Issuer: xblog
+  Expire: 7200
+
+
+Email:
+  Host: 163.mail.com
+  Port: 25
+  UserName: dawnwhite0@163.com
+  Password: DJXKXCQMLVLZZWLQ
+  IsSSL: true
+  From: dawnwhite0@163.com
+  To:
+    - menah3m@outlook.com
